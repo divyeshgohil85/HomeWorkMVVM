@@ -1,8 +1,10 @@
 package com.imaginato.homeworkmvvm.data.remote.demo
 
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+
 
 class DemoDataRepository constructor(
     private var api: DemoApi
@@ -12,8 +14,12 @@ class DemoDataRepository constructor(
         private const val NOTHING_GET = "Nothing get!"
     }
 
-    override suspend fun getDemoData() = flow {
+    override suspend fun getDemoData(): Flow<String> {
+        TODO("Not yet implemented")
+    }
+
+    /*override suspend fun getDemoData() = flow {
         val response = api.getDemoDataAsync(URL_GET_PUBLIC_IP).await()
         emit(response.ipAddress ?: NOTHING_GET)
-    }.flowOn(Dispatchers.IO)
+    }.flowOn(Dispatchers.IO)*/
 }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginActivity">
+
+    <data>
+        <variable
+            name="myLoginViewModel"
+            type="com.imaginato.homeworkmvvm.ui.login.LoginActivityViewModel" />
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:background="@drawable/jetdev_icon"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="JetDevs"
+            android:textColor="@color/black"
+            android:textSize="@android:dimen/app_icon_size"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:hint="Username"
+        android:background="@drawable/rounded_bg"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_margin="20dp"
+        android:hint="Password"
+        android:background="@drawable/rounded_bg"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_margin="20dp"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:text="Login"
+
+        android:layout_height="70dp"/>
+
+</LinearLayout>
+</layout>
